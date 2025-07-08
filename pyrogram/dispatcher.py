@@ -274,7 +274,7 @@ class Dispatcher:
                     self.loop.create_task(self.handler_worker(self.locks_list[-1]))
                 )
 
-            log.info("Started %s HandlerTasks", self.client.workers)
+            #log.info("Started %s HandlerTasks", self.client.workers)
 
             if not self.client.skip_updates:
                 await self.client.recover_gaps()
