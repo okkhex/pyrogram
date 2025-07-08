@@ -56,7 +56,7 @@ class Connection:
             self.protocol = self.protocol_factory(ipv6=self.ipv6, proxy=self.proxy)
 
             try:
-                log.info("Connecting...")
+                #log.info("Connecting...")
                 await self.protocol.connect(self.address)
             except OSError as e:
                 log.warning("Unable to connect due to network issues: %s", e)
