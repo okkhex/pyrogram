@@ -280,7 +280,7 @@ class Session:
                 self.pending_acks.clear()
 
     async def ping_worker(self):
-        log.info("PingTask started")
+        #log.info("PingTask started")
 
         while True:
             try:
