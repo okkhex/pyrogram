@@ -63,11 +63,11 @@ class Connection:
                 await self.protocol.close()
                 await asyncio.sleep(1)
             else:
-                log.info("Connected! %s DC%s%s - IPv%s",
-                         "Test" if self.test_mode else "Production",
-                         self.dc_id,
-                         " (media)" if self.media else "",
-                         "6" if self.ipv6 else "4")
+                # log.info("Connected! %s DC%s%s - IPv%s",
+                #          "Test" if self.test_mode else "Production",
+                #          self.dc_id,
+                #          " (media)" if self.media else "",
+                #          "6" if self.ipv6 else "4")
                 break
         else:
             log.warning("Connection failed! Trying again...")
