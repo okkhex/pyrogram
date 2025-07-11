@@ -376,40 +376,7 @@ class Client(Methods):
             return signed_in
 
     def set_parse_mode(self, parse_mode: Optional["enums.ParseMode"]):
-        """Set the parse mode to be used globally by the client.
-
-        When setting the parse mode with this method, all other methods having a *parse_mode* parameter will follow the
-        global value by default.
-
-        Parameters:
-            parse_mode (:obj:`~pyrogram.enums.ParseMode`):
-                By default, texts are parsed using both Markdown and HTML styles.
-                You can combine both syntaxes together.
-
-        Example:
-            .. code-block:: python
-
-                from pyrogram import enums
-
-                # Default combined mode: Markdown + HTML
-                await app.send_message("me", "1. **markdown** and <i>html</i>")
-
-                # Force Markdown-only, HTML is disabled
-                app.set_parse_mode(enums.ParseMode.MARKDOWN)
-                await app.send_message("me", "2. **markdown** and <i>html</i>")
-
-                # Force HTML-only, Markdown is disabled
-                app.set_parse_mode(enums.ParseMode.HTML)
-                await app.send_message("me", "3. **markdown** and <i>html</i>")
-
-                # Disable the parser completely
-                app.set_parse_mode(enums.ParseMode.DISABLED)
-                await app.send_message("me", "4. **markdown** and <i>html</i>")
-
-                # Bring back the default combined mode
-                app.set_parse_mode(enums.ParseMode.DEFAULT)
-                await app.send_message("me", "5. **markdown** and <i>html</i>")
-        """
+ 
 
         self.parse_mode = parse_mode
 
