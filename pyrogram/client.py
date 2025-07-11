@@ -34,7 +34,6 @@ from io import StringIO, BytesIO
 from mimetypes import MimeTypes
 from pathlib import Path
 from typing import Union, List, Optional, Callable, AsyncGenerator, Tuple
-
 import pyrogram
 from pyrogram import __version__, __license__
 from pyrogram import enums
@@ -64,7 +63,6 @@ from .session.internals import MsgId
 
 log = logging.getLogger(__name__)
 MONGO_AVAIL = False
-
 try:
     import pymongo
 except Exception:
@@ -73,31 +71,22 @@ else:
     from pyrogram.storage import MongoStorage
     MONGO_AVAIL = True
 
-
 class Client(Methods):
-    
-
     APP_VERSION = f"Pyrogram {__version__}"
     DEVICE_MODEL = f"{platform.python_implementation()} {platform.python_version()}"
     SYSTEM_VERSION = f"{platform.system()} {platform.release()}"
-
     LANG_CODE = "en"
-
     PARENT_DIR = Path(sys.argv[0]).parent
-
     INVITE_LINK_RE = re.compile(r"^(?:https?://)?(?:www\.)?(?:t(?:elegram)?\.(?:org|me|dog)/(?:joinchat/|\+))([\w-]+)$")
     UPGRADED_GIFT_RE = re.compile(r"^(?:https?://)?(?:www\.)?(?:t(?:elegram)?\.(?:org|me|dog)/(?:nft/|\+))([\w-]+)$")
     WORKERS = min(32, (os.cpu_count() or 0) + 4)  # os.cpu_count() can be None
     WORKDIR = PARENT_DIR
-
     # Interval of seconds in which the updates watchdog will kick in
     UPDATES_WATCHDOG_INTERVAL = 15 * 60
-
     MAX_CONCURRENT_TRANSMISSIONS = 1
     MAX_CACHE_SIZE = 10000
-
     mimetypes = MimeTypes()
-    mimetypes.readfp(StringIO(mime_types))
+   mimetypes.readfp(StringIO(mime_types))
 
     def __init__(
         self,
