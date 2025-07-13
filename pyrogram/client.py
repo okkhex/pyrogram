@@ -86,7 +86,7 @@ class Client(Methods):
     MAX_CONCURRENT_TRANSMISSIONS = 1
     MAX_CACHE_SIZE = 10000
     mimetypes = MimeTypes()
-   mimetypes.readfp(StringIO(mime_types))
+    mimetypes.readfp(StringIO(mime_types))
 
     def __init__(
         self,
