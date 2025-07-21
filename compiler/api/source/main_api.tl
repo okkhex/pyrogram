@@ -2590,7 +2590,7 @@ phone.setCallRating#59ead627 flags:# user_initiative:flags.0?true peer:InputPhon
 phone.saveCallDebug#277add7e peer:InputPhoneCall debug:DataJSON = Bool;
 phone.sendSignalingData#ff7a9383 peer:InputPhoneCall data:bytes = Bool;
 phone.createGroupCall#48cdc6d8 flags:# rtmp_stream:flags.2?true peer:InputPeer random_id:int title:flags.0?string schedule_date:flags.1?int = Updates;
-phone.joinGroupCall#d61e1df3 flags:# muted:flags.0?true video_stopped:flags.2?true call:InputGroupCall join_as:InputPeer invite_hash:flags.1?string key_fingerprint:flags.3?long params:DataJSON = Updates;
+phone.joinGroupCall#b132ff7b flags:# muted:flags.0?true video_stopped:flags.2?true call:InputGroupCall join_as:InputPeer invite_hash:flags.1?string params:DataJSON = Updates;
 phone.leaveGroupCall#500377f9 call:InputGroupCall source:int = Updates;
 phone.inviteToGroupCall#7b393160 call:InputGroupCall users:Vector<InputUser> = Updates;
 phone.discardGroupCall#7a777135 call:InputGroupCall = Updates;
