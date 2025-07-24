@@ -1,22 +1,3 @@
-#  Pyrofork - Telegram MTProto API Client Library for Python
-#  Copyright (C) 2017-present Dan <https://github.com/delivrance>
-#  Copyright (C) 2022-present Mayuri-Chan <https://github.com/Mayuri-Chan>
-#
-#  This file is part of Pyrofork.
-#
-#  Pyrofork is free software: you can redistribute it and/or modify
-#  it under the terms of the GNU Lesser General Public License as published
-#  by the Free Software Foundation, either version 3 of the License, or
-#  (at your option) any later version.
-#
-#  Pyrofork is distributed in the hope that it will be useful,
-#  but WITHOUT ANY WARRANTY; without even the implied warranty of
-#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#  GNU Lesser General Public License for more details.
-#
-#  You should have received a copy of the GNU Lesser General Public License
-#  along with Pyrofork.  If not, see <http://www.gnu.org/licenses/>.
-
 import asyncio
 import functools
 import inspect
@@ -112,7 +93,6 @@ class Client(Methods):
         password: Optional[str] = None,
         workers: int = WORKERS,
         workdir: Union[str, Path] = WORKDIR,
-        plugins: Optional[dict] = None,
         parse_mode: "enums.ParseMode" = enums.ParseMode.DEFAULT,
         no_updates: Optional[bool] = None,
         skip_updates: bool = True,
@@ -147,7 +127,6 @@ class Client(Methods):
         self.password = password
         self.workers = workers
         self.workdir = Path(workdir)
-        self.plugins = plugins
         self.parse_mode = parse_mode
         self.no_updates = no_updates
         self.skip_updates = skip_updates
